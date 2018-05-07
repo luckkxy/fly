@@ -1,0 +1,20 @@
+export class Circle{
+    constructor(
+        x=100,
+        y=100,
+        r=100,
+        color='green'
+    ){
+        this.x=x;
+        this.y=y;
+        this.r=r;
+        this.color=color;
+    }
+    draw(ctx){
+        ctx.beginPath();
+        ctx.strokeStyle=this.color;
+        ctx.arc(this.x,this.y,this.r,0,2*Math.PI);
+        ctx.stroke();
+        ctx.closePath();
+    }
+}
